@@ -9,14 +9,16 @@
 	<meta name="author" content="">
 	<link rel="icon" href="favicon.ico">
 
-	<title>Jumbotron Template for Bootstrap</title>
+	<title>IntraSyM 2.0</title>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/header.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
+	<link href="css/ind.css" rel="stylesheet">
 
 	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="" rel="stylesheet">
 
 	<!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
 	<script src="js/ie-emulation-modes-warning.js"></script>
@@ -60,70 +62,8 @@
 		</nav>
 	</header>
 	<div class="container">
-		<style media="screen">
-			nav {
-				height: 70px;
-				background: #003A64;
-			}
-			.navbar-brand img{
-				height: 50px;
-			}
-			header + div{
-				margin-top: 70px;
-			}
-			.back1{
-				background: url('images/helloquence-61189-unsplash.jpg');
-				border: red dotted 1px;
-				height: 500px;
-				background-position: center;
-				background-size: cover;
-				margin-bottom: 1em;
-			}
-			.back2{
-				background: url('images/bench-accounting-49025-unsplash.jpg');
-				border: red dotted 1px;
-				height: 500px;
-				background-position: center;
-				background-size: cover;
-				margin-bottom: 1em;
-			}
-			.back3{
-				background: url('images/john-schnobrich-520023-unsplash.jpg');
-				border: red dotted 1px;
-				height: 500px;
-				background-position: center;
-				background-size: cover;
-				margin-bottom: 1em;
-			}
-			.imgs a{
-				display: flex;
-				align-items: center;
-
-			}
-			.imgs a span{
-				margin-top: auto 0px;
-				font-size: 2.5em;
-				font-weight: bold;
-				color: #F7C80E;
-			}
-			@media screen and (max-width: 768px) {
-				.back1,.back2,.back3{
-					height: 200px;
-				}
-			}
-			@media screen and (min-width: 992px) {
-				.col-md-4{
-					width: 30%;
-					margin-left: 3.3%;
-				}
-			}
-			footer{
-				background: #003A64;
-				color: #FFF;
-			}
-		</style>
-		<div class="col-md-12 text-center">
-			<h1>Plataforma de conocimiento</h1>
+		<div class="title text-center">
+			<h1 class="">Plataforma de conocimiento</h1>
 		</div>
 		<div class="col-md-12 text-center imgs">
 			<a href="" class="col-xs-12 col-md-4 back1"><span>Gestión Documental</span></a>
@@ -134,25 +74,21 @@
 	<footer class="nav">
 		<div class="container">
 			<div class="col-md-12">
-				<ul class="list-inline list-unstyled text-center">
-					<li class="col-md-3 "><i class="fa fa-fw fa-circle"></i><a href=""> Intranet SyM</a></li>
-					<li class="col-md-3 "><i class="fa fa-fw fa-circle"></i><a href=""> Proceso de aprobación</a></li>
-					<li class="col-md-3 "><i class="fa fa-fw fa-circle"></i> Siguenos
+				<ul class="listind list-inline list-unstyled text-center">
+					<li class="col-md-3 "><a href=""><span class="fa fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-home fa-stack-1x"></i></span> Intranet SyM</a></li>
+					<li class="col-md-3"><a href=""><span class="fa fa-stack fa-lg"><i class="fa fa-stack-2x fa-circle"></i><i class="fa fa-stack-1x fa-users"></i></span> Proceso de aprobación</a></li>
+					<li class="col-md-3"><span class="fa fa-stack fa-lg"><i class="fa fa-stack-2x fa-circle"></i><i class="fa fa-stack-1x fa-share-square-o"></i></span> Siguenos
 						<ul class="list-unstyled list-inline">
-							<li><a href=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href=""><i class="fa fa-"></i></a></li>
-							<li><a href=""><i class="fa fa-"></i></a></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li><a href="" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<!-- <li><a href="" target="_blank"><i class="fa fa-"></i></a></li>
+							<li><a href="" target="_blank"><i class="fa fa-"></i></a></li> -->
 						</ul>
 					</li>
-					<li class="col-md-3 "><i class="fa fa-fw fa-circle"></i><a href=""> Mapa de procesos</a></li>
+					<li class="col-md-3"><a href=""><span class="fa fa-stack fa-lg"><i class="fa fa-stack-2x fa-circle"></i><i class="fa fa-stack-1x fa-map-signs"></i></span> Mapa de procesos</a></li>
 				</ul>
 			</div>
-			<div class="col-md-12 text-center"><a href="" class="col-md-6"><img src="images/SyM-02-1.png" alt="" class="img-responsive"></a></div>
+			<div class="col-md-12 logo text-center"><a href="" class=""><img src="images/SyM-02-1.png" alt="" class=""></a></div>
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
