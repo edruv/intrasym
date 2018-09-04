@@ -1,0 +1,26 @@
+footer{
+	margin-top: 2em;
+	background: #003A64;
+	color: #FFF;
+}
+footer a{
+	color: #FFF;
+	text-decoration: none;
+}
+footer a:hover{
+	color: #ebebeb;
+	text-decoration: none;
+}
+footer li {
+	font-size: 1.25em;
+}
+footer .fa-circle{
+	/* font-size: 3em; */
+	color: #2A82AA;
+}
+footer .listind{
+	margin-top: 1em;
+}
+footer .logo{
+	margin: auto;
+}

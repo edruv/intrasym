@@ -1,0 +1,14 @@
+nav {
+	height: 70px;
+	background: #003A64;
+}
+.navbar-brand img{
+	height: 50px;
+}
+header .nav li a{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+header + div{
+	margin-top: 60px;
+}
