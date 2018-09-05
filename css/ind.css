@@ -1,5 +1,6 @@
 .fdiv{
 	margin-top: 72px;
+	padding-top: 1em;
 }
 .fsearch .title{
 
@@ -38,14 +39,19 @@
 	margin: 1em;
 }
 .main .title span{
-	font-size: 2em;
-	color: #2B6CA3;
+	font-size: 2.5em;
+	color: #045184;
+	font-weight: bold;
+
 }
 .main ul li .center-block{
 	/* background: darkgreen; */
 	font-size: 2em;
 	color: #000;
 	/* width: 100%; */
+}
+.main ul li .fa-stack {
+	font-size: 3em;
 }
 @media screen and (max-width: 768px) {
 	.main ul li{
