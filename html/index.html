@@ -44,16 +44,16 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
-						<li><a href="#contact">Login <i class="fa fa-sign-in"></i></a></li>
+						<li><a href="#" data-toggle="modal" data-target="#login">Login <i class="fa fa-sign-in"></i></a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestión Doctos <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="#">Desarrollo</a></li>
 								<li><a href="#">Gestión Doctos</a></li>
 								<li role="separator" class="divider"></li>
-								<li class="dropdown-header">Nav header</li>
+								<!-- <li class="dropdown-header">Nav header</li>
 								<li><a href="#">Separated link</a></li>
-								<li><a href="#">One more separated link</a></li>
+								<li><a href="#">One more separated link</a></li> -->
 							</ul>
 						</li>
 					</ul>
@@ -62,8 +62,8 @@
 		</nav>
 	</header>
 	<div class="container fdiv">
-		<div class="col-md-3">
-			<form action="">
+		<div class="col-md-3 fsearch">
+			<form action="#">
 				<div class="title text-center">
 					<span>Buscador</span>
 				</div>
@@ -80,34 +80,182 @@
 				<div class="form-group">
 					<select name="" id="" class="text-center form-control">
 						<option selected disabled>Área</option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
+						<option value="">Desarrollo humano</option>
+						<option value="">Informacion y tecnologia</option>
+						<option value="">Planeacion estrategica</option>
+						<option value="">PMO</option>
 					</select>
 				</div>
 				<div class="form-group">
 					<select name="" id="" class="text-center form-control">
 						<option selected disabled>Sub-área</option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
+						<option value="">Desarrollo organizacional</option>
+						<option value="">Atraccion de talentos</option>
+						<option value="">Compesaciones</option>
+						<option value="">Servicios al personal</option>
+						<option value="">Relaciones laborales</option>
+						<option value="">Seguridad patrimonial</option>
 					</select>
 				</div>
 				<div class="form-group">
 					<select name="" id="" class="text-center form-control">
 						<option selected disabled>Tipo</option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
+						<option value="">Manuales</option>
+						<option value="">Politicas</option>
+						<option value="">Procedimientos</option>
+						<option value="">Registros</option>
 					</select>
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control text-center" placeholder="Codigo Docto">
 				</div>
-				<input type="submit" value="Buscar" class="btn btn-primary col-md-12">
+				<input type="submit" value="Buscar" class="btn btn-primary col-xs-12 col-md-12">
 			</form>
 		</div>
-		<div class="col-md-9"></div>
+		<div class="col-md-9 main">
+			<div>
+				<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title text-center" id="">Iniciar sesión</h4>
+							</div>
+							<div class="modal-body text-center">
+								<form action="">
+									<div class="form-group text-center">
+										<label for="mail">Email</label>
+										<input type="email" name="mail" id="mail" class="form-control" required placeholder="Email">
+									</div>
+									<div class="form-group text-center">
+										<label for="pass">Contraseña</label>
+										<input type="password" name="pass" id="pass" class="form-control" required placeholder="Contraseña">
+									</div>
+									<div class="row">
+										<input type="submit" name="btnlogin" value="Iniciar Sesion" class="btn btn-primary col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+										<a href="#" class="btn btn-link"data-toggle="modal" data-dismiss="modal" data-target="#rempass">¿Has olvidado la contraseña?</a>
+										<span>¿No tienes todavía una cuenta? <a href="#" class="" data-toggle="modal" data-target="#signin" data-dismiss="modal">Regístrate!</a></span>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="rempass" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title text-center" id="">Restablecer Contraseña</h4>
+							</div>
+							<div class="modal-body text-center">
+								<form action="">
+									<p>Por favor escribe tu dirección de correo que registraste</p>
+									<div class="form-group text-center">
+										<label for="mail">Email</label>
+										<input type="email" name="mail" id="mail" class="form-control" required placeholder="Email">
+									</div>
+									<div class="row">
+										<input type="submit" name="btnrempass" value="Recuperar" class="btn btn-primary col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title text-center" id="">Regístrate</h4>
+							</div>
+							<div class="modal-body text-center">
+								<form action="">
+									<div class="form-group text-center">
+										<label for="mail">Email</label>
+										<input type="email" name="mail" id="mail" class="form-control" required placeholder="Email">
+									</div>
+									<div class="form-group text-center">
+										<label for="pass">Contraseña</label>
+										<input type="password" name="pass" id="pass" class="form-control" required placeholder="Contraseña">
+									</div>
+									<div class="form-group text-center">
+										<label for="cnfpass">Confirmar contraseña</label>
+										<input type="password" name="cnfpass" id="cnfpass" class="form-control" required placeholder="Confirmar contraseña">
+									</div>
+									<div class="row">
+										<input type="submit" name="btnsignin" value="Registrarse" class="btn btn-primary col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+											<span class="col-md-12">¿Ya tienes un perfil personal?<a href="#" class="btn btn-link" data-toggle="modal" data-target="#login" data-dismiss="modal">Inicia sesión</a></span>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="title text-center">
+				<span>Gestión Documental</span>
+			</div>
+			<div>
+				<ul class="text-center list-inline list-unstyled">
+					<li>
+						<a href="">
+							<span class="fa fa-stack fa-lg">
+								<i class="fa fa-stack-2x fa-circle"></i>
+								<i class="fa fa-stack-1x fa-lightbulb-o"></i>
+							</span>
+							<span class="center-block">Desarrollo</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="fa fa-stack fa-lg">
+								<i class="fa fa-stack-2x fa-circle"></i>
+								<i class="fa fa-stack-1x fa-"></i>
+							</span>
+							<span class="center-block">D&N</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="fa fa-stack fa-lg">
+								<i class="fa fa-stack-2x fa-circle"></i>
+								<i class="fa fa-stack-1x fa-usd"></i>
+							</span>
+							<span class="center-block">Contraloria</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="fa fa-stack fa-lg">
+								<i class="fa fa-stack-2x fa-circle"></i>
+								<i class="fa fa-stack-1x fa-shopping-cart"></i>
+							</span>
+							<span class="center-block">Comercial</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="fa fa-stack fa-lg">
+								<i class="fa fa-stack-2x fa-circle"></i>
+								<i class="fa fa-stack-1x fa-industry"></i>
+							</span>
+							<span class="center-block">Operaciones</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<footer class="nav">
 		<div class="container">
