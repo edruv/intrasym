@@ -14,21 +14,6 @@
 .main ul .fa-stack-1x{
 	color: #FFF;
 }
-/* .main ul li{
-	text-decoration: none;
-	list-style: none;
-	background: red;
-	width: 25%;
-	margin: 1em;
-	padding: 1em;
-}
-.main ul li a{
-	background: blue;
-}
-.main ul li a .fa-stack{
-	background: aqua;
-	font-size: 5em;
-}*/
 .main ul li{
 	/* background: blue; */
 	width: 25%;
@@ -59,3 +44,17 @@
 		margin: 1em 0px;
 	}
 }
+/* .fa-stack-1x, .fa-stack-2x {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.fa-stack-1x {
+	line-height: inherit;
+}
+
+.fa-stack-2x {
+	font-size: 2em;
+} */
