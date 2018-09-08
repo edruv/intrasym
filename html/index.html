@@ -102,9 +102,29 @@
 							})
 							.fail(function() {
 								console.log("error");
+								$('#area option').remove();
+								$('#area').append('<option selected disabled>Area</option>');
+							});
+						});
+
+						$('#area').change(function() {
+							var val = $(this).val();
+							// console.log(val);
+							$.ajax({
+								url: '../php/areas.php',
+								type: 'GET',
+								data: {subarea: val}
 							})
-							.always(function() {
-								console.log("complete");
+							.done(function(subareas) {
+								$('#subarea option').remove();
+								$('#subarea').append('<option selected disabled>Sub-área</option>');
+								subareas = JSON.parse(subareas);
+								for (var i = 0; i < subareas.length; i++) {
+									$('#subarea').append('<option value=\"'+subareas[i].id+'\">'+subareas[i].nombre+'</option>');
+								}
+							})
+							.fail(function() {
+								console.log("error");
 							});
 
 						});
@@ -134,23 +154,23 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<select name="" id="" class="text-center form-control">
+					<select name="subarea" id="subarea" class="text-center form-control">
 						<option selected disabled>Sub-área</option>
-						<option value="">Desarrollo organizacional</option>
+						<!-- <option value="">Desarrollo organizacional</option>
 						<option value="">Atraccion de talentos</option>
 						<option value="">Compesaciones</option>
 						<option value="">Servicios al personal</option>
 						<option value="">Relaciones laborales</option>
-						<option value="">Seguridad patrimonial</option>
+						<option value="">Seguridad patrimonial</option> -->
 					</select>
 				</div>
 				<div class="form-group">
 					<select name="" id="" class="text-center form-control">
 						<option selected disabled>Tipo</option>
-						<option value="">Manuales</option>
-						<option value="">Politicas</option>
-						<option value="">Procedimientos</option>
-						<option value="">Registros</option>
+						<option value="1">Manuales</option>
+						<option value="2">Politicas</option>
+						<option value="3">Procedimientos</option>
+						<option value="4">Registros</option>
 					</select>
 				</div>
 				<div class="form-group">

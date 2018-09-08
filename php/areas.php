@@ -29,4 +29,19 @@
 		echo json_encode($areas);
 	}
 
+	if (isset($_GET['subarea'])) {
+		$id = $_GET['subarea'];
+
+		// $data = dbhome();
+		$data = dbjob();
+
+		$con = conexion($data);
+		$stmt = $con->prepare('SELECT * from subarea where idArea=:id');
+		$stmt->execute(array(':id' => $id));
+		$subareas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		echo json_encode($subareas);
+
+	}
+
 ?>
