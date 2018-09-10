@@ -1,0 +1,10 @@
+.fdiv.list-inline li .label{
+	font-size: .8em;
+}
+.main ul li{
+	/* background: blue; */
+	width: 33%;
+}
+.main ul li .center-block{
+	font-size: 2em;
+}
