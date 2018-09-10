@@ -9,7 +9,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="favicon.ico">
 
-	<title>IntraSyM 2.0</title>
+	<title>IntraSyM 2.0 | Gestión Documental</title>
 
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/header.css" rel="stylesheet">
@@ -64,9 +64,10 @@
 	</header>
 	<div class="container fdiv">
 		<div class="col-md-3 fsearch">
-			<form action="#">
+			<form action="#" id="fsearch" name="fsearch">
 				<script type="text/javascript">
 					$(document).ready(function() {
+						$('#fsearch').trigger('reset');
 						$.ajax({
 							url: '../php/areas.php',
 							type: 'GET',
@@ -126,9 +127,7 @@
 							.fail(function() {
 								console.log("error");
 							});
-
 						});
-
 					});
 				</script>
 				<div class="title text-center">
@@ -276,7 +275,7 @@
 			<div>
 				<ul class="text-center list-inline list-unstyled">
 					<li>
-						<a href="">
+						<a href="desarrollo.html">
 							<span class="fa fa-stack fa-lg">
 								<i class="fa fa-stack-2x fa-circle"></i>
 								<i class="fa fa-stack-1x fa-lightbulb-o"></i>
